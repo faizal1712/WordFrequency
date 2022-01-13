@@ -44,7 +44,7 @@ func wordCount(content string) []wordStruct {
 	wordMap := make(map[string]int)
 
 	for i := 0; i < len(wordSlice); i++ {
-		wordMap[wordSlice[i]] += 1
+		wordMap[strings.ToLower(wordSlice[i])] += 1
 	}
 	words := make([]string, 0, len(wordMap))
 	for word := range wordMap {
